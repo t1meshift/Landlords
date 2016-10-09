@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ru.t1meshift.landlords.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1488"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="3sp"
+        android:id="@+id/total_income"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_alignTop="@+id/imageView"/>
+
+    <ImageView
+        android:layout_width="16sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/coin"
+        android:layout_below="@+id/buy_btn"
+        android:layout_alignStart="@+id/buy_btn"
+        android:layout_marginLeft="5dp"/>
+
+    <GridLayout
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:id="@+id/gridLayout"
+        android:columnCount="10"
+        android:rowCount="10"
+        android:layout_alignParentStart="true">
+
+    </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Cell (0,0)"
+        android:id="@+id/cell_xy"
+        android:layout_alignTop="@+id/gridLayout"
+        android:layout_toEndOf="@+id/gridLayout"
+        android:layout_marginLeft="5dp"/>
+
+    <ImageView
+        android:layout_width="24sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/coin"
+        android:layout_below="@+id/cell_xy"
+        android:layout_alignStart="@+id/cell_xy"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="+5"
+        android:id="@+id/income"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_alignBottom="@+id/imageView2"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="3sp"/>
+
+    <ImageView
+        android:layout_width="24sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/armor"
+        android:layout_alignTop="@+id/income"
+        android:layout_toEndOf="@+id/income"
+        android:layout_marginLeft="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="3"
+        android:id="@+id/armor"
+        android:layout_toEndOf="@+id/imageView3"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_marginLeft="3sp"
+        android:gravity="center_vertical"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy (80)"
+        android:id="@+id/buy_btn"
+        android:layout_marginLeft="24sp"
+        android:layout_alignTop="@+id/enforce_btn"
+        android:layout_toEndOf="@+id/enforce_btn"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enforce (6)"
+        android:id="@+id/enforce_btn"
+        android:enabled="true"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Move 1"
+        android:id="@+id/move_count"
+        android:layout_alignBottom="@+id/player_flag"
+        android:layout_toEndOf="@+id/player_flag"
+        android:layout_alignTop="@+id/player_flag"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="3dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_flag"
+        android:src="@drawable/flag_yellow"
+        android:layout_below="@+id/enforce_btn"
+        android:layout_alignStart="@+id/imageView2"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:id="@+id/skip_btn"
+        android:layout_below="@+id/move_count"
+        android:layout_alignStart="@+id/player_flag"
+        android:layout_alignEnd="@+id/buy_btn"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>
