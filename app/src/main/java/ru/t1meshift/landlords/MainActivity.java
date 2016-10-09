@@ -235,6 +235,8 @@ public class MainActivity extends AppCompatActivity {
         if (flag == playerFlag)
             return "you";
         switch (flag) {
+            case 0:
+                return "no one";
             case 1:
                 return "Red";
             case 2:
