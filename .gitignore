@@ -1,0 +1,11 @@
+.gradle
+/local.properties
+.DS_Store
+/build
+gradle.properties
+.idea
+.navigation
+/captures
+*.iml
+gradlew
+gradlew.bat 

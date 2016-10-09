@@ -9,7 +9,7 @@ import android.widget.*;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private GridLayout field;
     private TextView cellInfo;
     private TextView cellIncome;
@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            getSupportActionBar().hide();
+            //getSupportActionBar().hide();
+            getActionBar().hide();
         }
         //Creating bots...
         int tempFlag = 1;
