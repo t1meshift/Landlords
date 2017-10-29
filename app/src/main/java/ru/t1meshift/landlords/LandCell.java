@@ -1,5 +1,7 @@
 package ru.t1meshift.landlords;
 
+import android.os.Parcelable;
+
 /**
  * Created by t1meshft on 09.10.2016.
  */

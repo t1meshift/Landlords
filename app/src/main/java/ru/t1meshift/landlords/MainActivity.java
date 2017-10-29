@@ -10,6 +10,7 @@ import android.widget.*;
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
+    //private final String INSTANCE_KEY = "Landlords";
     private GridLayout field;
     private TextView cellInfo;
     private TextView cellIncome;
@@ -77,7 +78,6 @@ public class MainActivity extends Activity {
                 playerFlagImg.setImageResource(R.drawable.flag_yellow);
                 break;
         }
-
         cells = new CellView[100];
         for (int y=0;y<field.getColumnCount();y++) {
             for (int x=0;x<field.getRowCount();x++) {
@@ -86,6 +86,10 @@ public class MainActivity extends Activity {
                     public void onClick(View v) {
                         //v.getId() will give you the image id
                         CellView clickedCell = (CellView) v;
+                        cells[currentCellY*10+currentCellX].unmark();
+                        cells[currentCellY*10+currentCellX].invalidate();
+                        clickedCell.mark();
+                        clickedCell.invalidate();
                         showCellInfo(clickedCell);
                     }
                 });
@@ -110,6 +114,15 @@ public class MainActivity extends Activity {
                 move(Move.skip);
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("playerFlag", playerFlag);
+        outState.putInt("currentCellX", currentCellX);
+        outState.putInt("currentCellY", currentCellY);
+        outState.putInt("moves", moves);
     }
 
     private void showCellInfo(CellView clickedCell) {

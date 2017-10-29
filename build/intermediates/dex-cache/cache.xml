@@ -2,46 +2,130 @@
 <items version="2" >
 
     <item
-        jar="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\jars\classes.jar"
+        is-multidex="false"
+        jar="C:\Users\t1meshft\.android\build-cache\b10efbaad3cf2d37fce346540597d6b4ed96b190\output\jars\classes.jar"
         jumboMode="false"
-        revision="24.0.2"
-        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.4.0_cb5f83fe22ea3dc5fc11614d59ac9a0712d1417f.jar" />
-    </item>
-    <item
-        jar="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.2"
+        optimize="true"
+        revision="26.0.2"
         sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.4.0_9d71b79e83c78fe136245bf7e9b0f8245fe4424d.jar" />
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\pre-dexed\debug\classes_1a5dd464d065ed45707804a238e19e2489aa0009.jar" />
     </item>
     <item
-        jar="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.2"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.4.0_f2bde508b9c72a45442f2300379fa495057c792d.jar" />
+        is-multidex="true"
+        jar="D:\hackathon2k16\Landlords\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e5b9ab9aa84f6fa60aff47847be03cf47d9b5d25">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c06d9dfcf56b0cee779255d5c662eb31402c7ddc\classes.dex" />
     </item>
     <item
-        jar="C:\Program Files (x86)\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
-        jumboMode="false"
-        revision="24.0.2"
-        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_b389dfa4a551983d66802ba11e81ad48acfe026e.jar" />
-    </item>
-    <item
-        jar="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\classes.jar"
-        jumboMode="false"
-        revision="24.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.4.0_3f509816259de91b87c2fa7ea2bd226678bbb464.jar" />
-    </item>
-    <item
-        jar="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\jars\libs\internal_impl-23.4.0.jar"
-        jumboMode="false"
-        revision="24.0.2"
+        is-multidex="true"
+        jar="C:\Users\t1meshft\.android\build-cache\bc72193142f706e40cc70de2a9c1228768b654c5\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
         sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="D:\hackathon2k16\Landlords\Landlords\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_7518190d0fef51581399149d3f90b8983d430e59.jar" />
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.4.0_42d6ec42a73c0e81d41eedb905b76efbb0a1abfe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\hackathon2k16\Landlords\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f03e9fd50b8130c83e92b5a46e08a86d29bb5743\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\sdk-tools-windows-3859397\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.4.0_6b6a3d23354e6f55848ee2a3c425dcfdd60a9706\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\t1meshft\.android\build-cache\bc72193142f706e40cc70de2a9c1228768b654c5\output\jars\libs\internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\pre-dexed\debug\internal_impl-23.4.0_42d6ec42a73c0e81d41eedb905b76efbb0a1abfe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\t1meshft\.android\build-cache\bc72193142f706e40cc70de2a9c1228768b654c5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\pre-dexed\debug\classes_b4aaf28ae3788285c1f3447131145909eb86b5e4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\sdk-tools-windows-3859397\extras\android\m2repository\com\android\support\support-annotations\23.4.0\support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\pre-dexed\debug\support-annotations-23.4.0_6b6a3d23354e6f55848ee2a3c425dcfdd60a9706.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\t1meshft\.android\build-cache\bc72193142f706e40cc70de2a9c1228768b654c5\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b4aaf28ae3788285c1f3447131145909eb86b5e4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\t1meshft\.android\build-cache\b10efbaad3cf2d37fce346540597d6b4ed96b190\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1a5dd464d065ed45707804a238e19e2489aa0009\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\t1meshft\.android\build-cache\ee9053f553ba91c64cfdb5be3c23b396d6cb60d3\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\pre-dexed\debug\classes_054c5a17ff7644b8692baf93e67f3585b4dcf2bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\t1meshft\.android\build-cache\4497fc231f2536dd85dc7053058cb0769223f259\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\pre-dexed\debug\classes_25454f4eebe03e46e1e7b5d7095b930681f43d63.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\t1meshft\.android\build-cache\4497fc231f2536dd85dc7053058cb0769223f259\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_25454f4eebe03e46e1e7b5d7095b930681f43d63\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\t1meshft\.android\build-cache\ee9053f553ba91c64cfdb5be3c23b396d6cb60d3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="D:\hackathon2k16\Landlords\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_054c5a17ff7644b8692baf93e67f3585b4dcf2bd\classes.dex" />
     </item>
 
 </items>
