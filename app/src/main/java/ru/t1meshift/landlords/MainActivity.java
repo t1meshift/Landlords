@@ -1,8 +1,9 @@
 package ru.t1meshift.landlords;
 
 import android.app.Activity;
+import android.app.Application;
+import android.content.Context;
 import android.content.res.Configuration;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
@@ -21,17 +22,18 @@ public class MainActivity extends Activity {
     private TextView moneyCount;
     private TextView movesCount;
     private ImageView playerFlagImg;
-
-    private CellView[] cells;
+    private App app;
     private enum Move {
         enforce, buy, skip
     }
-    private int playerFlag = 1; //0 - no one, 1-4 - R,G,B,Y
-    private Player player = new Player(playerFlag);
-    private Player[] enemies = new Player[3];
+
+    private int playerFlag;
+    private CellView[] cells;
+    private Player player;
+    private Player[] enemies;
     private int currentCellX = 0, currentCellY = 0;
+    private int moves;
     private int enforcePrice = 0;
-    private int moves = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +43,6 @@ public class MainActivity extends Activity {
             //getSupportActionBar().hide();
             getActionBar().hide();
         }
-        //Creating bots...
-        int tempFlag = 1;
-        for (int i=0;i<4;i++) {
-            if (tempFlag>4) break;
-            if (tempFlag != playerFlag)
-                enemies[i] = new Player(tempFlag);
-            else if(tempFlag<4)
-                enemies[i] = new Player(++tempFlag);
-            tempFlag++;
-        }
-        //вроде создал
 
         field = (GridLayout) findViewById(R.id.gridLayout);
         cellInfo = (TextView) findViewById(R.id.cell_xy);
@@ -64,7 +55,18 @@ public class MainActivity extends Activity {
         movesCount = (TextView) findViewById(R.id.move_count);
         playerFlagImg = (ImageView) findViewById(R.id.player_flag);
 
-        switch (playerFlag) {
+        app = (App) getApplicationContext();
+
+        playerFlag = app.getPlayerFlag();
+        cells = app.getCells();
+        player = app.getPlayer();
+        enemies = app.getEnemies();
+        currentCellX = app.getCurrentCellX();
+        currentCellY = app.getCurrentCellY();
+        moves = app.getMoves();
+
+
+        switch (app.getPlayerFlag()) {
             case 1:
                 playerFlagImg.setImageResource(R.drawable.flag_red);
                 break;
@@ -78,27 +80,12 @@ public class MainActivity extends Activity {
                 playerFlagImg.setImageResource(R.drawable.flag_yellow);
                 break;
         }
-        cells = new CellView[100];
-        for (int y=0;y<field.getColumnCount();y++) {
-            for (int x=0;x<field.getRowCount();x++) {
-                CellView cell = new CellView(this, new LandCell((int)Math.ceil(Math.random()*10),0),x,y);
-                cell.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
-                        //v.getId() will give you the image id
-                        CellView clickedCell = (CellView) v;
-                        cells[currentCellY*10+currentCellX].unmark();
-                        cells[currentCellY*10+currentCellX].invalidate();
-                        clickedCell.mark();
-                        clickedCell.invalidate();
-                        showCellInfo(clickedCell);
-                    }
-                });
-                cells[y*10+x] = cell;
-                field.addView(cell);
-            }
-        }
 
-        showCellInfo(cells[0]); //first cell
+        showCells();
+
+        cells[currentCellY*10+currentCellX].mark();
+        cells[currentCellY*10+currentCellX].invalidate();
+        showCellInfo(cells[currentCellY*10+currentCellX]); //first cell
         buyButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 move(Move.buy);
@@ -117,13 +104,20 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("playerFlag", playerFlag);
-        outState.putInt("currentCellX", currentCellX);
-        outState.putInt("currentCellY", currentCellY);
-        outState.putInt("moves", moves);
+    protected void onDestroy() {
+        super.onDestroy();
+        app.setCells(cells);
+        app.setPlayer(player);
+        app.setEnemies(enemies);
+        app.setCurrentCellX(currentCellX);
+        app.setCurrentCellY(currentCellY);
+        app.setMoves(moves);
+
+        cells[currentCellY*10+currentCellX].unmark();
+
+        field.removeAllViews();
     }
+
 
     private void showCellInfo(CellView clickedCell) {
         LandCell clickedCellInfo = clickedCell.getCell();
@@ -261,6 +255,25 @@ public class MainActivity extends Activity {
                 return "Yellow";
             default:
                 return "Unknown";
+        }
+    }
+    private void showCells() {
+        for (int y=0;y<10;y++) {
+            for (int x=0;x<10;x++) {
+                CellView cell = cells[y*10+x];
+                cell.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        //v.getId() will give you the image id
+                        CellView clickedCell = (CellView) v;
+                        cells[currentCellY*10+currentCellX].unmark();
+                        cells[currentCellY*10+currentCellX].invalidate();
+                        clickedCell.mark();
+                        clickedCell.invalidate();
+                        showCellInfo(clickedCell);
+                    }
+                });
+                field.addView(cell);
+            }
         }
     }
 }
